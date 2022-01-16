@@ -309,6 +309,7 @@ section img{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 155px;
 }
 .pricing--box{
     width: 372px;
@@ -318,6 +319,7 @@ section img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .pricing--box>h4{
     font-family: Raleway, sans-serif;
@@ -348,16 +350,17 @@ section img{
     margin-bottom: 69px;
     color: #FB3B64;
 }
-.middle-blue>h5{
-    color: #07ACE6;
+.left-red p:nth-of-type(1):before,
+.left-red p:nth-of-type(2):before,
+.left-red p:nth-of-type(3):before{
+    content: url(../images/Checkmark-1.svg);
+    padding-right: 10px;
 }
-.right-green>h5{
-    color: #55DFB4
+.left-red p:nth-of-type(4):before,
+.left-red p:nth-of-type(5):before{
+    content: url(../images/Close.svg);
+    padding-right: 10px;
 }
-.right-green{
-    border: 1px solid #55DFB4;
-}
-
 .middle-blue{
     width: 405px;
     height: 500px;
@@ -369,4 +372,58 @@ section img{
 }
 .middle-blue p{
     margin-bottom: 26px;
+}
+
+.middle-blue>h5{
+    color: #07ACE6;
+}
+.middle-blue p:nth-of-type(1):before,
+.middle-blue p:nth-of-type(2):before,
+.middle-blue p:nth-of-type(3):before,
+.middle-blue p:nth-of-type(4):before{
+    content: url(../images/Checkmark-1.svg);
+    padding-right: 10px;
+}
+.middle-blue p:nth-of-type(5):before {
+    content: url(../images/Close.svg);
+    padding-right: 10px;
+}
+
+
+.right-green{
+    border: 1px solid #55DFB4;
+}
+.right-green>h5{
+    color: #55DFB4
+}
+.right-green p:nth-of-type(1):before,
+.right-green p:nth-of-type(2):before,
+.right-green p:nth-of-type(3):before,
+.right-green p:nth-of-type(4):before,
+.right-green p:nth-of-type(5):before{
+    content: url(../images/Checkmark-1.svg);
+    padding-right: 10px;
+}
+.button{
+    position: absolute;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    bottom: -25px;
+}
+.red-button{
+    background: #EB476E;
+    border-radius: 23px;
+    padding: 16px 57px;
+}
+.blue-button{
+    padding: 16px 64px;
+    background: #07ACE6;
+    border-radius: 23px;
+}
+.green-button{
+    border-radius: 23px;
+    padding: 16px 57px;
+    background: #55DFB4;
 }
