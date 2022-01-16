@@ -574,3 +574,12 @@ form label:nth-of-type(2){
 .footer-social a{
     padding: 2px;
 }
+.shop--opening a:hover{
+    background: darkviolet;
+}
+.pricing a:hover{
+    background: darkviolet;
+}
+.form--box button:hover{
+    background: darkviolet;
+}
