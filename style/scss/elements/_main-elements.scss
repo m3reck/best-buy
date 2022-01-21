@@ -1,0 +1,19 @@
+@import "navbar";
+@import "banner";
+@import "numbers";
+@import "content";
+@import "pricing";
+@import "contact";
+@import "footer";
+
+.shop--opening a:hover{
+  background: $hover-violet;
+}
+.pricing a:hover{
+  background: $hover-violet;
+}
+.form--box button:hover{
+  background: $hover-violet;
+}
+
+

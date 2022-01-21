@@ -1,0 +1,136 @@
+.content--background {
+  width: 100%;
+  background: #F7F7F7;
+  padding: 105px 0;
+
+  .content--frame {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+
+    > div { //gdyby rozjechały się divy, spróbuj wyjebać selektor diva i zastosować zwykłą spację
+      width: 100%;
+      border: 1px solid #E8E9ED;
+      border-radius: 5px;
+      height: 370px;
+      background: white;
+      margin-bottom: 37px;
+    }
+
+    .content--content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      .content--text {
+        width: 416px;
+        text-align: center;
+        margin-left: 35px;
+        margin-right: 20px;
+
+        h3 {
+          font-family: $secondary-font-family;
+          font-size: 36px;
+          text-align: left;
+          font-weight: 400;
+          margin-bottom: 30px;
+          margin-right: 170px;
+        }
+
+        p {
+          font-family: $main-font-family;
+          text-align: left;
+          font-weight: 500;
+        }
+      }
+      .content--image--red{
+        width: 200px;
+        height: 200px;
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        background: $main-red 0 0;
+        border-radius: 41px;
+        margin-top: 38px;
+        position: absolute;
+        right: 10%;
+        bottom: 25%;
+        .macbook{
+          height: 219px;
+          width: 387px;
+          align-self: flex-end;
+          margin-bottom: 38px;
+          margin-right: 160px;
+        }
+      }
+      .content--image--blue{
+        width: 320px;
+        height: 320px;
+        background: $main-blue 0 0;
+        border-radius: 50%;
+        margin-left: 70px;
+        margin-bottom: 10px;
+        img{
+          width: 426px;
+          height: 328px;
+          position: absolute;
+          bottom: 10px;
+          left: 85px;
+        }
+      }
+
+    }
+    >div:nth-of-type(3){
+      width: 60%;
+    }
+    .trumpet{
+      width: 440px;
+      height: 370px;
+      background: $main-cyan center;
+      position: absolute;
+      bottom: 37px;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #E8E9ED;
+      border-radius: 5px;
+      img{
+          position: absolute;
+          width: 296px;
+          height: 207px;
+        }
+      }
+    }
+  }
+
+.red--line:after{
+  content: "";
+  border: 1px solid $main-red;
+  width: $paragraph-underline-width;
+  height: $paragraph-underline-height;
+  background: $main-red;
+  position: absolute;
+  left: 35px;
+  bottom: 61px;
+}
+.blue--line:after {
+  content: "";
+  border: 1px solid $main-blue;
+  width: $paragraph-underline-width;
+  height: $paragraph-underline-height;
+  background: $main-blue;
+  position: absolute;
+  right: 103px;
+  bottom: 61px;
+}
+.cyan--line:after {
+  content: "";
+  border: 1px solid $main-cyan;
+  width: $paragraph-underline-width;
+  height: $paragraph-underline-height;
+  background: $main-cyan;
+  position: absolute;
+  left: 35px;
+  bottom: 25px;
+}

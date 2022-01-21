@@ -1,0 +1,112 @@
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 376px;
+  margin-bottom: 60px;
+
+  .contact--way {
+    margin-right: 114px;
+
+    h5 {
+      font-size: 49px;
+      font-family: Raleway, sans-serif;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 500;
+      margin-bottom: 42px;
+    }
+
+    span {
+      color: #A5A5A5;
+      font-family: "Open Sans", sans-serif;
+      margin-right: 20px;
+      display: inline-flex;
+
+      &:nth-of-type(1):before {
+        content: url(./images/MailIcon.svg);
+        padding-right: 10px;
+      }
+      &:nth-of-type(2):before{
+        content: url(./images/PhoneIcon.svg);
+        padding-right: 10px;
+      }
+    }
+  }
+  .form--box{
+    width: 35%;
+    height: 372px;
+
+    input[type="text"]{
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #A5A5A5;
+      width: 100%;
+      margin: 25px 0;
+      opacity: 0.7;
+    }
+    input[type="email"]{
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #A5A5A5;
+      width: 100%;
+      margin: 25px 0;
+      opacity: 0.7;
+    }
+    label:nth-of-type(1),
+    label:nth-of-type(2){
+      color: $main-blue;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: $main-font-family;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .checkbox-label{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      span{
+        font-size: 12px;
+        color: #707070;
+        font-family: $main-font-family;
+        width: 93%;
+        cursor: pointer;
+      }
+      button{
+        font-family: $main-font-family;
+        font-weight: 700;
+        font-size: 13px;
+        background: $main-blue;
+        box-shadow: 5px 10px 14px #07ACE629;
+        border-radius: 35px;
+        padding: 20px 97px;
+        color: white;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .checkbox {
+        appearance: none;
+        background-color: white;
+        border: 1px solid #95989A;
+        border-radius: 4px;
+        width: 24px;
+        height: 24px;
+        margin-right: auto;
+        margin-left: 0;
+        cursor: pointer;
+        &:checked{
+          background: url(./images/Checkmark.svg) center;
+          background-repeat: no-repeat;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

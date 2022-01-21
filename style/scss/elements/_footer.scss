@@ -1,0 +1,45 @@
+.footer--background {
+  box-shadow: $box-shadow-bottom;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 90px;
+
+    .footer-logo {
+      p {
+        font-family: Raleway, sans-serif;
+        font-size: 26px;
+        color: $main-blue;
+        font-weight: 400;
+        margin-bottom: 7px;
+      }
+
+      span {
+        color: #A5A5A5;
+        font-family: "Open Sans", sans-serif;
+        font-size: 11px;
+      }
+    }
+    .footer-social{
+      display: flex;
+
+      .twitter{
+        width: $social-media-size;
+        height: $social-media-size;
+        background: url(./images/Twitter.svg) center;
+        margin-right: 20px;
+      }
+      .facebook{
+        background: url(./images/Facebook.svg) center;
+        width: $social-media-size;
+        height: $social-media-size;
+      }
+      a{
+        padding: 2px;
+      }
+    }
+  }
+}
