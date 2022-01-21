@@ -8,12 +8,15 @@
 
 .shop--opening a:hover{
   background: $hover-violet;
+  transform: scale(1.2);
 }
 .pricing a:hover{
   background: $hover-violet;
+  transform: scale(1.2);
 }
-.form--box button:hover{
+.contact-form .form--box .checkbox-label button:hover{
   background: $hover-violet;
+  transform: scale(1.2);
 }
 
 

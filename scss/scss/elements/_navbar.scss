@@ -1,0 +1,92 @@
+.navbar{
+  width: 100%;
+  box-shadow: $box-shadow-top;
+}
+.header__menu-btn {
+  width: 20px;
+  height: 20px;
+  display: none;
+  appearance: none;
+  @include phone{
+    display: block;
+    order: 2;
+    &:after{
+      content: "\f0c9";
+      font-size: 20px;
+      color: $main-blue;
+    }
+    &:checked {
+      content: url(/images/times-solid.svg);
+      color: $main-blue;
+      }
+    }
+  }
+
+      .navbar--top {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include phone{
+        }
+
+        .list {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          @include tablet{
+            display: none;
+          }
+
+          div {
+            display: inline-flex;
+            font-family: "Open Sans", sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #A5A5A5;
+            text-align: center;
+            margin-right: 95px;
+            text-transform: uppercase;
+            height: 100%;
+            align-items: center;
+            padding: 0 6px;
+            font-weight: bold;
+
+            &:hover {
+              color: black;
+              border-bottom: 4px solid $main-blue;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .logo {
+        color: $main-blue;
+        font-family: Raleway, sans-serif;
+        font-size: 32px;
+        text-align: left;
+        font-weight: 300;
+      }
+.mobile-title{
+  @include phone{
+    height: 100vh;
+  }
+}
+.navbar--top .header__menu-btn:checked ~ .list {
+  display: flex;
+  flex-direction: column;
+  top: 76px;
+  width: 100%;
+  transform: translateX(0);
+  height: auto;
+  position: absolute;
+  background: white;
+  box-shadow: $box-shadow-top;
+  padding-bottom: 20px;
+}
+.navbar--top .header__menu-btn:checked ~ .list div{
+  width: 70%;
+  height: 35px;
+
+}

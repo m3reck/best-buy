@@ -2,11 +2,18 @@
 @import "shadows";
 @import "typography";
 @import "sizings";
+@import "breakpoints";
 
-.container {
+
+.container{
   width: 1352px;
   margin: 0 auto;
+  @include tablet{
+    width: 100%;
+    padding: 0 20px;
+  }
 }
+
 a{
   text-decoration: none;
   color: inherit;

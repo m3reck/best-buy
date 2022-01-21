@@ -5,6 +5,9 @@
 
 
   margin-bottom: 120px;
+  @include phone{
+    flex-direction: column;
+  }
 
   h2 {
     width: 100%;
@@ -13,6 +16,10 @@
     font-size: 36px;
     font-weight: 400;
     margin-bottom: 100px;
+    @include phone{
+      width:80%;
+      margin: 0 auto;
+    }
   }
 
   .numbers {
@@ -22,6 +29,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    @include phone{
+      margin: 30px auto;
+    }
+    }
 
     h3 {
       font-family: $secondary-font-family;
@@ -45,7 +56,7 @@
       margin-bottom: 14px;
       align-self: center;
       &:after {
-        content: url(./images/Person.svg);
+        content: url(/images/Person.svg);
         position: relative;
         left: 50%;
         bottom: -5px;
@@ -58,7 +69,7 @@
       background: $main-blue;
       margin-bottom: 14px;
       &:after{
-        content: url(./images/Eye.svg);
+        content: url(/images/Eye.svg);
         position: relative;
         left: 35%;
         bottom: -25%;
@@ -71,11 +82,10 @@
       background: $main-cyan;
       margin-bottom: 14px;
       &:after{
-        content: url(./images/Catalog.svg);
+        content: url(/images/Catalog.svg);
         position: relative;
         left: 50%;
         bottom: -10px;
       }
     }
   }
-}

@@ -2,6 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  @include phone{
+    display:inline-block;
+    height:auto;
+  }
 
   height: 376px;
   margin-bottom: 60px;
@@ -27,13 +31,16 @@
       font-family: "Open Sans", sans-serif;
       margin-right: 20px;
       display: inline-flex;
+      @include phone{
+        width:100%;
+      }
 
       &:nth-of-type(1):before {
-        content: url(./images/MailIcon.svg);
+        content: url(/images/MailIcon.svg);
         padding-right: 10px;
       }
       &:nth-of-type(2):before{
-        content: url(./images/PhoneIcon.svg);
+        content: url(/images/PhoneIcon.svg);
         padding-right: 10px;
       }
     }
@@ -41,6 +48,10 @@
   .form--box{
     width: 35%;
     height: 372px;
+    @include phone{
+      width: 100%;
+      margin-top:40px;
+    }
 
     input[type="text"]{
       outline: none;
@@ -77,6 +88,11 @@
         font-family: $main-font-family;
         width: 93%;
         cursor: pointer;
+        @include phone{
+          padding-right: 10px;
+          line-height: 1.2;
+          font-size: 16px;
+        }
       }
       button{
         font-family: $main-font-family;
@@ -90,6 +106,7 @@
         border: none;
         margin-top: 20px;
         cursor: pointer;
+        transition: 2s;
       }
       .checkbox {
         appearance: none;
@@ -102,7 +119,7 @@
         margin-left: 0;
         cursor: pointer;
         &:checked{
-          background: url(./images/Checkmark.svg) center;
+          background: url(/images/Checkmark.svg) center;
           background-repeat: no-repeat;
           text-align: center;
         }

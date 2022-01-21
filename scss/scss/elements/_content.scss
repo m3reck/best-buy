@@ -23,12 +23,22 @@
       justify-content: space-between;
       align-items: center;
       position: relative;
+      @include phone{
+        flex-direction: column-reverse;
+        height: 100vh;
+      }
 
       .content--text {
         width: 416px;
         text-align: center;
         margin-left: 35px;
         margin-right: 20px;
+        @include phone{
+          position: absolute;
+          bottom: 15%;
+          width: 90%;
+          font-size: 20px;
+        }
 
         h3 {
           font-family: $secondary-font-family;
@@ -44,24 +54,8 @@
           text-align: left;
           font-weight: 500;
         }
-      }
-      .content--image--red{
-        width: 200px;
-        height: 200px;
-        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        background: $main-red 0 0;
-        border-radius: 41px;
-        margin-top: 38px;
-        position: absolute;
-        right: 10%;
-        bottom: 25%;
-        .macbook{
-          height: 219px;
-          width: 387px;
-          align-self: flex-end;
-          margin-bottom: 38px;
-          margin-right: 160px;
-        }
+
+
       }
       .content--image--blue{
         width: 320px;
@@ -70,18 +64,36 @@
         border-radius: 50%;
         margin-left: 70px;
         margin-bottom: 10px;
+        @include phone{
+          position: absolute;
+          top: 25px;
+        }
         img{
           width: 426px;
           height: 328px;
           position: absolute;
           bottom: 10px;
           left: 85px;
+          @include phone{
+            top: 50px;
+            left: 0;
+
+          }
         }
       }
 
     }
     >div:nth-of-type(3){
       width: 60%;
+      @include phone{
+        width: 100%;
+        height: 750px;
+        flex-direction: column;
+        align-items: center;
+        >div{
+          top: 15%;
+        }
+      }
     }
     .trumpet{
       width: 440px;
@@ -95,10 +107,18 @@
       align-items: center;
       border: 1px solid #E8E9ED;
       border-radius: 5px;
+      @include phone{
+        width:100%;
+      }
       img{
           position: absolute;
           width: 296px;
           height: 207px;
+        @include phone{
+          width: auto;
+          height: auto;
+          top: 15%;
+        }
         }
       }
     }
@@ -113,6 +133,9 @@
   position: absolute;
   left: 35px;
   bottom: 61px;
+  @include phone{
+    display: none;
+  }
 }
 .blue--line:after {
   content: "";
@@ -123,6 +146,9 @@
   position: absolute;
   right: 103px;
   bottom: 61px;
+  @include phone{
+    display: none;
+  }
 }
 .cyan--line:after {
   content: "";
@@ -132,5 +158,37 @@
   background: $main-cyan;
   position: absolute;
   left: 35px;
-  bottom: 25px;
+  bottom: 50px;
+  @include phone{
+    display: none;
+  }
+}
+.macbook{
+  height: 219px;
+  width: 387px;
+  align-self: flex-end;
+  margin-bottom: 38px;
+  margin-right: 160px;
+  z-index: 1;
+  @include phone{
+    position: absolute;
+        top: 20%;
+    right: -15%;
+  }
+}
+.content--image--red {
+  width: 200px;
+  height: 200px;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  background: $main-red 0 0;
+  border-radius: 41px;
+  margin-top: 38px;
+  position: absolute;
+  right:125px;
+  top:25px;
+  @include phone {
+    top: 15%;
+    z-index: 0;
+    right: 15%
+  }
 }

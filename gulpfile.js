@@ -1,4 +1,4 @@
-const entryPath = "08_Dzien_4_-_Praca_domowa/02_Flexbox_Grow_Shrink";
+const entryPath = ".";
 
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
@@ -8,7 +8,7 @@ const browserSync = require("browser-sync").create();
 
 function compileSass(done) {
     gulp
-        .src(entryPath + "/scss/style.scss")
+        .src(entryPath + "/scss/main.scss")
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
         .pipe(autoprefixer())

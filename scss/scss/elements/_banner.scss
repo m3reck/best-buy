@@ -12,6 +12,11 @@
     font-family: $main-font-family;
     color: black;
     text-align: center;
+    @include phone{
+      max-width: 70%;
+      margin: 0 auto 28px auto;
+      ;
+    }
   }
   a{
     font-family: $main-font-family;
@@ -22,13 +27,19 @@
     font-weight: 600;
     display: inline-block;
     width: 30%;
+    transition: 2s;
+    @include phone{
+      width: 90%;
+    }
   }
 }
 .main--background{
-  position: relative;   //test naprawy błędu pozycji
   margin-bottom: 100px;
   img{
-    position: absolute; //test naprawy błędu pozycji-zmienić na relative w razie w, ale lepiej nie
     width: 100%;
+    @include phone{
+      height: 40vh;
+      object-fit: cover;
+    }
   }
 }

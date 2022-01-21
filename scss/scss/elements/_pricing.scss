@@ -1,0 +1,186 @@
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-bottom: 155px;
+
+  h4 {
+    width: 200%;
+    text-align: center;
+    margin-top: 100px;
+    font-family: $secondary-font-family;
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 300;
+  }
+}
+  .pricing--box{
+    width: 372px;
+    height: 461px;
+    border: 1px solid $main-red;
+    border-radius: 18px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .button{
+      position: absolute;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+      bottom: -25px;
+    }
+  }
+  .pricing--box {
+    h5 {
+      font-family: $secondary-font-family;
+      font-size: 20px;
+      margin-top: 34px;
+      margin-bottom: 14px;
+      font-weight: 800;
+    }
+
+    h6 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 46px;
+      font-weight: 300;
+      color: $main-red;
+      margin-bottom: 14px;
+    }
+
+    span {
+      margin-top: 5px;
+      font-family: Raleway, sans-serif;
+      font-size: 12px;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+.left-red {
+  @include phone {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 350px;
+    width: 70%;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+    .red-basic {
+      margin-bottom: 69px;
+      color: $main-red;
+    }
+
+    p:nth-of-type(1):before,
+    p:nth-of-type(2):before,
+    p:nth-of-type(3):before {
+      content: url(/images/Checkmark-1.svg);
+      padding-right: $checkmark-boxes-padding-right;
+    }
+
+    p:nth-of-type(4):before,
+    p:nth-of-type(5):before {
+      content: url(/images/Close.svg);
+      padding-right: $checkmark-boxes-padding-right;
+    }
+    .red-button {
+      background: $main-red;
+      border-radius: 23px;
+      padding: 16px 57px;
+      transition: 2s linear;
+    }
+  }
+
+.middle-blue{
+  @include phone {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 400px;
+    width:90%;
+    margin-bottom: 50px;
+    text-align: center;
+    .middle-in-left{
+      padding-bottom: 30px;
+    }
+    }
+  width: 405px;
+  height: 500px;
+  border: 1px solid $main-blue;
+  box-shadow: $box-shadow-center-blue;
+  span{
+    margin-bottom: 61px;
+  }
+  p {
+    margin-bottom: 26px;
+  }
+  h6{
+    color: $main-blue;
+  }
+  p:nth-of-type(1):before,
+  p:nth-of-type(2):before,
+  p:nth-of-type(3):before,
+  p:nth-of-type(4):before{
+    content: url(/images/Checkmark-1.svg);
+    padding-right: $checkmark-boxes-padding-right;
+  }
+  p:nth-of-type(5):before {
+    content: url(/images/Close.svg);
+    padding-right: $checkmark-boxes-padding-right;
+  }
+  .blue-button{
+    padding: 16px 64px;
+    background: $main-blue;
+    border-radius: 23px;
+    transition: 2s linear;
+  }
+}
+.right-green{
+  border: 1px solid $main-cyan;
+  @include phone {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 350px;
+    width: 70%;
+    margin-bottom: 50px;
+    text-align: center;
+    .right-in-left{
+      padding-bottom:30px;
+    }
+  }
+  h6{
+    color: $main-cyan
+  }
+  p:nth-of-type(1):before,
+  p:nth-of-type(2):before,
+  p:nth-of-type(3):before,
+  p:nth-of-type(4):before,
+  p:nth-of-type(5):before{
+    content: url(/images/Checkmark-1.svg);
+    padding-right: $checkmark-boxes-padding-right;
+  }
+  .green-button{
+    border-radius: 23px;
+    padding: 16px 57px;
+    background: $main-cyan;
+    transition: 2s linear;
+  }
+}
+.middle-in-left{
+  margin-bottom: 40px;
+  text-align: center;
+}
+.right-in-left{
+  margin-bottom: 40px;
+  text-align: center;
+}
